@@ -1,0 +1,121 @@
+:root{
+    --primary: #006BFF;
+    --secundary: #000000;
+    --white: #FFFFFF;
+}
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: -0.009em;
+    color: var(--secundary);
+}
+h2{
+    /* Desktop/h2 */
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 65px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.005em;
+    color: var(--secundary);
+}
+p{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+}
+header{
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(10, 1fr) ;
+    height: 96px;
+    background: var(--white);
+    grid-template-areas:
+    "logo logo . tabs tabs tabs . actions actions actions";
+    padding: 24px 83px;
+}
+.flex{
+    display: flex;
+}
+.divLogo{
+    grid-area: logo;
+}
+.alignCenter{
+    align-items: center;
+}
+.alignJustifyCenter{
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 165.75px;
+    height: 40px;
+}
+.tabs{
+    grid-area: tabs;
+}
+.actions{
+    grid-area: actions;
+}
+ul.menu > li{
+    margin: 0 16px;
+    list-style-type: none;
+}
+li{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+}
+.btn{ 
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn-primary{
+    color: var(--secundary); 
+    padding: 10px 24px;
+}
+.btn-blue{
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 10px 24px;
+}
+
+.hero{
+    display: grid;
+    height: 80vh;
+    padding: 128px 83px;
+    grid-template: repeat(8, 1fr) / repeat(10, 1fr) ;
+    grid-template-areas:
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp"
+    "info info info info . . comp comp comp comp";
+}
+.info{
+    grid-area: info;
+}
+.info span{
+    color: var(--primary);
+}
+.comp{
+    grid-area: comp;
+}
