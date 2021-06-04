@@ -1,6 +1,9 @@
+
+
 :root{
     --primary: #006BFF;
     --secundary: #000000;
+    --third : #FBFBFB;
     --white: #FFFFFF;
 }
 body{
@@ -10,6 +13,9 @@ body{
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span{
+    color: var(--primary);
 }
 h1{
     font-family: 'Inter', sans-serif;
@@ -31,6 +37,42 @@ h2{
     letter-spacing: -0.005em;
     color: var(--secundary);
 }
+h3{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px; 
+    letter-spacing: -0.004em;
+    color: var(--secundary);
+}
+h4{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.003em;
+    color: var(--secundary);
+}
+h5{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.003em;
+    color: var(--secundary);
+}
+h5.medium{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px; 
+}
 p{
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -38,6 +80,39 @@ p{
     font-size: 18px;
     line-height: 36px;
 }
+.textCentro{
+    text-align: center;
+}
+.mayus{
+    text-transform: uppercase;
+}
+.body1{
+/* Desktop/body1 - Regular */
+    font-family: 'Inter', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    /* or 200% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.002em;
+    /* Black */
+    color: var(--secundary); 
+}
+.body3{
+    /* Desktop/body3 - Regular */
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+    letter-spacing: -0.001em;
+    padding-bottom: 24px;
+}
+
 header{
     display: grid;
     grid-template: repeat(1, 1fr) / repeat(10, 1fr) ;
@@ -49,6 +124,12 @@ header{
 }
 .flex{
     display: flex;
+}
+.flexWrap{ 
+    display: flex;
+    flex:1;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .divLogo{
     grid-area: logo;
@@ -84,31 +165,29 @@ li{
 .btn{ 
     border-radius: 40px;
     cursor: pointer;
+    /* padding: 10px 24px; */
+    padding: 10px 14px;
 }
 .btn-primary{
     color: var(--secundary); 
-    padding: 10px 24px;
 }
 .btn-blue{
     color: var(--white);
     background-color: var(--primary);
-    padding: 10px 24px;
 }
 
 .hero{
     display: grid;
-    height: 80vh;
+    height: 60vh;
     padding: 128px 83px;
-    grid-template: repeat(8, 1fr) / repeat(10, 1fr) ;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr) ;
     grid-template-areas:
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp"
-    "info info info info . . comp comp comp comp";
+    "info info info info comp comp comp comp"
+    "info info info info comp comp comp comp"
+    "info info info info comp comp comp comp"
+    "info info info info comp comp comp comp"
+    "info info info info comp comp comp comp"
+    "info info info info comp comp comp comp";
 }
 .info{
     grid-area: info;
@@ -118,4 +197,437 @@ li{
 }
 .comp{
     grid-area: comp;
+} 
+.form-control{ 
+    background: #FBFBFB;
+    /* Grey */
+    padding: 12px 24px;
+
+    border: 1px solid #CECECE;
+    box-sizing: border-box;
+    border-radius: 40px;
+    
+}
+/*Clearing Floats*/
+.cf:before, .cf:after{
+    content:"";
+    display:table;
+}
+
+.cf:after{
+    clear:both;
+}
+
+.cf{
+    zoom:1;
+}    
+/* Form wrapper styling */
+
+.search-wrapper {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 40px;
+    background: transparent;
+    box-shadow: 0 4px 20px -2px #e9e9e9;
+    border: 1px solid #CECECE;
+}
+
+/* Form text input */
+
+.search-wrapper input {
+    padding-left: 20px;
+    max-width: 260px;
+    height: 20px;
+    padding: 20px 20px;
+    float: left;
+    border: 0;
+    background: var(--third);
+    border-radius: 40px;
+    border-top-style: none;
+}
+
+.search-wrapper input:focus {
+    outline: 0;
+    background: var(--third);
+    box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+}
+
+.search-wrapper input::-webkit-input-placeholder {
+    color: #999;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    /* padding-left: 20px; */
+}
+
+.search-wrapper input:-moz-placeholder {
+    
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.search-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+  border-style: none;
+}   
+
+/* Form submit button */
+.search-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 60px;
+    width: 150px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+    text-transform: uppercase;
+    background: var(--secundary);
+    border-radius: 40px;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 30%);
+} 
+.search-wrapper button:active,
+.search-wrapper button:focus{  
+    background: var(--secundary);
+    outline: 0;  
+}
+
+.search-wrapper button:focus:before,
+.search-wrapper button:active:before{
+        border-right-color: #c42f2f;
+}     
+
+.search-wrapper button::-moz-focus-inner { 
+    /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}
+.espaciSecc{
+    padding: 80px 83px;
+}
+.programacion{
+    background: var(--third);
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+    height: 20vh;
+    grid-template-areas:
+    "titleProg titleProg titleProg titleProg titleProg titleProg" 
+    "compas drop ebay lazboy gartner twilio" ;
+}
+.progMax{
+    max-width: 599px;
+    text-align: center;
+    padding-bottom: 64px;
+}
+.titleProg{
+    grid-area: titleProg;
+}
+.compas{
+    grid-area: compas;
+}
+.drop{
+	grid-area: drop;
+}
+.ebay{
+	grid-area: ebay;
+}
+.lazboy{
+	grid-area: lazboy;
+}
+.gartner{
+	grid-area: gartner;
+}
+.twilio{
+	grid-area: twilio;
+}
+.calelAccion{
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(6, 1fr);
+    grid-template-areas: 
+    "titleCalendly titleCalendly titleCalendly titleCalendly titleCalendly titleCalendly"
+    "imgCalendly imgCalendly imgCalendly imgCalendly imgCalendly imgCalendly"
+    "divCalendly divCalendly divCalendly divCalendly divCalendly divCalendly"
+    "divCalendly divCalendly divCalendly divCalendly divCalendly divCalendly";
+    height: 100vh;
+}
+.titleCalendly{
+	grid-area:titleCalendly;
+}
+.imgCalendly{
+	grid-area:imgCalendly;
+    padding: 96px 0px;
+}
+.calendlyPng{
+    border-radius: 47.04px;
+}
+.divCalendly{
+	grid-area:divCalendly;
+}
+.divCalendly{
+	grid-area:divCalendly;
+}
+.textIntern{
+    flex: 0 1 calc(33% - 1em);
+    border-left: 1px solid #eee;
+}
+.textIntern:before {
+    content:"1";
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 800;
+    padding-top: 5px;
+    height: 25px;
+    border-radius: 100%;
+    margin-left: -15px;
+    background-color: var(--primary);
+}
+.textIntern:after{ 
+
+    content:"";
+    display:table;
+}
+.spacioIntern{
+    padding-left: 40px;
+}
+
+.elementos{
+    display: grid;
+    height: 125vh;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    grid-template-areas: 
+    "elementoTitle elementoTitle elementoTitle elementoTitle"
+    "elementoImg elementoImg elementoImg elementoImg"
+    "elementoImg elementoImg elementoImg elementoImg" 
+    "elementoImg elementoImg elementoImg elementoImg" 
+    "mainButton mainButton mainButton mainButton" ;
+}
+.elementoTitle{
+	grid-area:elementoTitle;
+}
+h5.spah5Title{
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.elementoImg{
+	grid-area:elementoImg;
+}
+.maxElementos{
+    max-width: 800px;
+}
+.elementosImgInterno{
+    flex: 0 1 calc(50% - 1em);
+}
+.elementoSpacioIntern{
+    padding: 40px 0px;
+}
+.sixeImgElement{
+    height: 286px;
+}
+.spacioElement{
+    padding: 40px 0px;
+}
+.mainButton{
+    grid-area: mainButton;
+}
+.btn-black{
+    padding: 10px 24px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+@media (max-width: 780px) and (min-width: 481px){
+    header{
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr) ;
+        height: 96px;
+        background: var(--white);
+        grid-template-areas:
+        "logo actions";
+        padding: 24px 16px;
+        /* box-shadow: -4px 4px 6px 2px #f5f5f5; */
+    }
+    .tabs{
+        grid-area: tabs;
+        display: none;
+    }
+    .hero{ 
+        padding: 64px 16px;
+        height: auto;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        "comp comp"
+        "info info";
+    }
+    .info{
+        padding-top: 24px;
+    }
+    h1{ 
+        font-weight: 900;
+        font-size: 45px;
+        line-height: 48px;
+        padding:32px 0px;
+    }
+    h2{
+        font-size: 35px;
+        line-height: 38px;
+    }
+    h4{
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 39px;
+    }
+    p{
+        padding-bottom: 24px;
+    }
+    .computer{
+        width: 80%;
+    }
+
+    .programacion{ 
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        height: 500px;
+        grid-template-areas:
+        "titleProg titleProg " 
+        "compas drop"
+        "ebay lazboy"
+        "gartner twilio" ;
+    }
+
+    .progMax{
+        max-width: 500px;
+        width: 90%;
+        padding-bottom: 64px;
+    }
+    .espaciSecc{
+        padding: 64px 16px;
+    }
+    .calendlyPng{
+        width: 80%;
+    }
+    .calelAccion{
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        grid-template-areas: 
+        "titleCalendly titleCalendly"
+        "imgCalendly imgCalendly"
+        "divCalendly divCalendly"
+        "divCalendly divCalendly";
+    }
+    .imgCalendly{
+        padding: 64px 0px;
+    }
+    .flexWrap{
+        display: grid;
+    }
+    .textIntern{
+        margin: 10px 0px;
+    }
+
+
+    .elementosImgInterno {
+        flex: 0 1 calc(100% - 1em);
+    }
+}
+
+@media (max-width: 480px){
+    header{
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr) ;
+        height: 96px;
+        background: var(--white);
+        grid-template-areas:
+        "logo actions";
+        padding: 24px 16px;
+        /* box-shadow: -4px 4px 6px 2px rgb(0 0 0 / 31%); */
+    }
+    .tabs{
+        grid-area: tabs;
+        display: none;
+    }
+    
+    .hero{ 
+        padding: 64px 16px;
+        height: auto;
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+        grid-template-areas:
+        "comp" 
+        "info";
+    }
+    .info{
+        padding-top: 0px;
+    }
+    h1{  
+        font-size: 40px;
+        line-height: 43px;
+        padding:10px 0px;
+    }
+    h2{
+        font-size: 35px;
+        line-height: 38px;
+    }
+    h4{ 
+        font-size: 24px;
+        line-height: 39px;
+    }
+    p{
+        padding-bottom: 24px;
+    }
+    .computer{
+        width: 100%;
+    }
+    .programacion{ 
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        height: 500px;
+        grid-template-areas:
+        "titleProg titleProg " 
+        "compas drop"
+        "ebay lazboy"
+        "gartner twilio" ;
+    }
+
+    .progMax{
+        max-width: 500px;
+        width: 90%;
+        padding-bottom: 64px;
+    }
+    .espaciSecc{
+        padding: 64px 16px;
+    }
+    .calendlyPng{
+        width: 80%;
+    }
+    .calelAccion{
+        grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+        grid-template-areas: 
+        "titleCalendly"
+        "imgCalendly"
+        "divCalendly"
+        "divCalendly";
+    }
+    .imgCalendly{
+        padding: 64px 0px;
+    }
+    .flexWrap{
+        display: grid;
+    }
+    .textIntern{
+        margin: 10px 0px;
+    }
+
+
+    .elementosImgInterno {
+        flex: 0 1 calc(100% - 1em);
+    }
 }
