@@ -1,5 +1,8 @@
 
 @media (max-width: 1329px) and (min-width: 781px){ 
+    .hide{
+        display: none;
+    }
     h1{ 
         font-weight: 900;
         font-size: 50px;
@@ -17,6 +20,22 @@
     .computer{
         width: 70%;
     }
+    .programacion{ 
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        height: 400px;
+        grid-template-areas:
+        "titleProg titleProg " 
+        "compas drop"
+        "ebay lazboy"
+        "gartner twilio" ;
+    }
+    .flexWrap{
+        display: inline-flex
+    }
+
+.elementosImgInterno{
+    flex: 0 1 calc(45% - 1em);
+}
 
 }
 @media (max-width: 780px) and (min-width: 481px){
