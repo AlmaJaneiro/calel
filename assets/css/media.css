@@ -1,0 +1,228 @@
+
+@media (max-width: 780px) and (min-width: 481px){
+    header{
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr) ;
+        height: 96px;
+        background: var(--white);
+        grid-template-areas:
+        "logo actions";
+        padding: 24px 16px;
+        /* box-shadow: -4px 4px 6px 2px #f5f5f5; */
+    }
+    .hide{
+        display: none;
+    }
+    .tabs{
+        grid-area: tabs;
+        display: none;
+    }
+    .hero{ 
+        padding: 64px 16px;
+        height: auto;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        "comp comp"
+        "info info";
+    }
+    .info{
+        width: 90%;
+        padding-top: 24px;
+    }
+    h1{ 
+        font-weight: 900;
+        font-size: 45px;
+        line-height: 48px;
+        padding:32px 0px;
+    }
+    h2{
+        font-size: 35px;
+        line-height: 38px;
+    }
+    h4{
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 39px;
+    }
+    p{
+        padding-bottom: 24px;
+    }
+    .computer{
+        width: 80%;
+    }
+
+    .programacion{ 
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        height: 500px;
+        grid-template-areas:
+        "titleProg titleProg " 
+        "compas drop"
+        "ebay lazboy"
+        "gartner twilio" ;
+    }
+
+    .progMax{
+        max-width: 500px;
+        width: 90%;
+        padding-bottom: 64px;
+    }
+    .espaciSecc{
+        padding: 64px 16px;
+    }
+    .calendlyPng{
+        width: 45%;
+    }
+    .calelAccion{
+        /* grid-template: repeat(4, 1fr) / repeat(1, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 180px);
+        grid-template-areas:
+        "titleCalendly "
+        "imgCalendly "
+        "divCalendly "
+        "divCalendly ";
+    }
+    .imgCalendly{
+        padding: 10px 0px;
+    }
+    .flexWrap{
+        display: grid;
+    }
+    .textIntern{
+        margin: 10px 0px;
+    }
+    .elementos{
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 200px);
+        grid-template-areas: 
+        "elementoTitle "
+        "elementoImg " 
+        "mainButton " ;
+    }
+    .elementosImgInterno {
+        flex: 0 1 calc(100% - 1em);
+    }
+    .sixeImgElement {
+        width:190px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px){
+
+    header{
+        display: grid;
+        grid-template: repeat(auto-fit, 1fr) / repeat(2, 1fr) ;
+        height: 96px;
+        background: var(--white);
+        grid-template-areas:
+        "logo actions";
+        padding: 24px 16px;
+        /* box-shadow: -4px 4px 6px 2px rgb(0 0 0 / 31%); */
+    }
+    .hide{
+        display: none;
+    }
+    .tabs{
+        grid-area: tabs;
+        display: none;
+    }
+    
+    .hero{ 
+        padding: 64px 16px;
+        height: auto;
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+        grid-template-areas:
+        "comp" 
+        "info";
+    }
+    .search-wrapper input {
+         width: 167px;
+    }
+    .search-wrapper button{
+        width: 110px;
+    }
+    .info{
+        padding-top: 0px;
+        width: 100%;
+    }
+    h1{  
+        font-size: 40px;
+        line-height: 43px;
+        padding:10px 0px;
+    }
+    h2{
+        font-size: 35px;
+        line-height: 38px;
+    }
+    h4{ 
+        font-size: 24px;
+        line-height: 39px;
+    }
+    p{
+        padding-bottom: 24px;
+    }
+    .computer{
+        width: 100%;
+    }
+    .programacion{ 
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        height: 500px;
+        grid-template-areas:
+        "titleProg titleProg " 
+        "compas drop"
+        "ebay lazboy"
+        "gartner twilio" ;
+    }
+
+    .progMax{
+        max-width: 500px;
+        width: 90%;
+        padding-bottom: 64px;
+    }
+    .espaciSecc{
+        padding: 64px 16px;
+    }
+    .calendlyPng{
+        width: 80%;
+    }
+    .calelAccion{
+        /* grid-template: repeat(4, 1fr) / repeat(1, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 180px);
+        grid-template-areas:
+        "titleCalendly "
+        "imgCalendly "
+        "divCalendly "
+        "divCalendly ";
+    }
+    .imgCalendly{
+        padding: 64px 0px;
+    }
+    .flexWrap{
+        display: grid;
+    }
+    .textIntern{
+        margin: 10px 0px;
+        width: 90%;
+    }
+    .elementos{
+        display: grid;
+        height: auto;
+        margin-top: 80px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 300px);
+        grid-template-areas: 
+        "elementoTitle "
+        "elementoImg " 
+        "mainButton " ;
+    }
+    .elementosImgInterno {
+        flex: 0 1 calc(100% - 1em);
+    }
+    .sixeImgElement {
+        width: 190px;
+    }
+}
