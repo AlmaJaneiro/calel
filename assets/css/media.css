@@ -1,4 +1,24 @@
 
+@media (max-width: 1329px) and (min-width: 781px){ 
+    h1{ 
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 53px;
+        padding:32px 0px;
+    }
+    .hero{ 
+        padding: 64px 16px;
+        height: auto;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        "info comp"
+        "info comp";
+    }
+    .computer{
+        width: 70%;
+    }
+
+}
 @media (max-width: 780px) and (min-width: 481px){
     header{
         display: grid;
@@ -18,9 +38,11 @@
         display: none;
     }
     .hero{ 
-        padding: 64px 16px;
+        padding: 30px 16px;
         height: auto;
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        /* grid-template: repeat(2, 1fr) / repeat(2, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 350px);
         grid-template-areas:
         "comp comp"
         "info info";
@@ -133,7 +155,9 @@
     .hero{ 
         padding: 64px 16px;
         height: auto;
-        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+        /* grid-template: repeat(2, 1fr) / repeat(1, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 300px);
         grid-template-areas:
         "comp" 
         "info";
