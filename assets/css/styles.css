@@ -9,6 +9,33 @@ body{
     font-family: 'Inter', sans-serif;
     font-style: normal;
 }
+.body1{
+/* Desktop/body1 - Regular */
+    font-family: 'Inter', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    /* or 200% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.002em;
+    /* Black */
+    color: var(--secundary); 
+}
+.body3{
+    /* Desktop/body3 - Regular */
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+    letter-spacing: -0.001em;
+    padding-bottom: 24px;
+}
+
 h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
@@ -53,6 +80,7 @@ h4{
     /* identical to box height, or 125% */
     letter-spacing: -0.003em;
     color: var(--secundary);
+    padding-bottom: 32px;
 }
 h5{
     font-family: 'Inter', sans-serif;
@@ -84,32 +112,10 @@ p{
 .mayus{
     text-transform: uppercase;
 }
-.body1{
-/* Desktop/body1 - Regular */
-    font-family: 'Inter', sans-serif; 
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 36px;
-    /* or 200% */
-    
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.002em;
-    /* Black */
-    color: var(--secundary); 
+.derecha{
+    text-align: right;
 }
-.body3{
-    /* Desktop/body3 - Regular */
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
-    letter-spacing: -0.001em;
-    padding-bottom: 24px;
-}
+/* Header */
 
 header{
     display: grid;
@@ -175,7 +181,7 @@ li{
     color: var(--white);
     background-color: var(--primary);
 }
-
+/* Hero */
 .hero{
     display: grid;
     max-width: 1980px;
@@ -319,6 +325,7 @@ li{
 .espaciSecc{
     padding: 80px 83px;
 }
+/* Programación */
 .programacion{
     background: var(--third);
     display: grid;
@@ -362,20 +369,21 @@ li{
 	grid-area: twilio;
     width: 90%;
 }
+/* Calendly */
 .calelAccion{
     max-width: 1980px;
     margin: 0 auto;
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(6, 1fr);
-    grid-template-areas: 
-    "titleCalendly titleCalendly titleCalendly titleCalendly titleCalendly titleCalendly"
-    "imgCalendly imgCalendly imgCalendly imgCalendly imgCalendly imgCalendly"
-    "divCalendly divCalendly divCalendly divCalendly divCalendly divCalendly"
-    "divCalendly divCalendly divCalendly divCalendly divCalendly divCalendly";
-    height: 900px;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    grid-template-areas:
+        "titleCalendly titleCalendly titleCalendly"
+        "imgCalendly imgCalendly imgCalendly"
+        "divCalendly divCalendly divCalendly";
+    height: max-content;
 }
 .titleCalendly{
 	grid-area:titleCalendly;
+    align-self: center;
 }
 .imgCalendly{
 	grid-area:imgCalendly;
@@ -415,20 +423,17 @@ li{
 .spacioIntern{
     padding-left: 40px;
 }
-
+/* Elementos */
 .elementos{
     display: grid;
-    /* */
     max-width: 1980px;
     margin: 0 auto;
-    height: 1100px; 
-    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
-    grid-template-areas: 
-    "elementoTitle elementoTitle elementoTitle elementoTitle"
-    "elementoImg elementoImg elementoImg elementoImg"
-    "elementoImg elementoImg elementoImg elementoImg" 
-    "elementoImg elementoImg elementoImg elementoImg" 
-    "mainButton mainButton mainButton mainButton" ;
+    height: max-content;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+        "elementoTitle elementoTitle"
+        "elementoImg elementoImg"
+        "mainButton mainButton";
 }
 .elementoTitle{
 	grid-area:elementoTitle;
@@ -450,7 +455,11 @@ h5.spah5Title{
     padding: 40px 0px;
 }
 .sixeImgElement{
-    height: 286px;
+    /* */
+    max-width: 350px; 
+    width: 90%;
+    max-height: 90%;
+    height: 276px;
 }
 .spacioElement{
     padding: 40px 0px;
@@ -463,4 +472,98 @@ h5.spah5Title{
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 40px;
+}
+
+/* Dedicar */
+.dedicar{
+    display: grid; 
+    max-width: 1980px;
+    margin: 0 auto;
+    height: max-content; 
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    grid-template-areas: 
+    "dedicarTitle dedicarTitle "
+    "dedicarDiv dedicarImg";
+}
+.dedicarTitle{
+    grid-area: dedicarTitle;
+    align-self: center;
+}
+.dedicarDiv{
+    grid-area: dedicarDiv;
+    align-self: center;
+}
+.dedicarImg{
+    align-self: center;
+    grid-area: dedicarImg;
+}
+.imgFollow{
+    width: 90%;
+    max-width: 450px;
+}
+/* Contacto */
+.contact{
+    display: grid; 
+    max-width: 1980px;
+    height: max-content; 
+    margin: 0 auto;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    grid-template-areas: 
+    "contactImg contactText";
+}
+.contactImg{
+    grid-area: contactImg;
+}
+.contactText{
+    grid-area: contactText;
+
+}
+.imgDate{
+    max-width: 485px;
+    width: 90%;
+}
+
+.phone{
+    display: grid; 
+    max-width: 1980px;
+    height: max-content; 
+    margin: 0 auto;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    grid-template-areas: 
+    " phoneText phoneImg";
+}
+.phoneImg{
+    grid-area: phoneImg;
+}
+.phoneText{
+    grid-area: phoneText;
+}
+.registrarse{
+    display: grid; 
+    max-width: 1980px;
+    height: max-content; 
+    margin: 0 auto;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template-areas: 
+    "registrarseTitle registrarseTitle registrarseBtn"  
+    "registrarseText registrarseText registrarseBtn"  ;
+}
+.registrarseTitle{
+    grid-area: registrarseTitle;
+}
+.registrarseText{
+    grid-area: registrarseText;
+}
+.registrarseBtn{
+    grid-area: registrarseBtn;
+}
+.spacioDown{
+    padding-bottom: 64px;;
+}
+.divTextoMax{
+    max-width: 800px;
+    width: 100%;
+}
+.derechaCenter{
+    text-align: right;
 }
